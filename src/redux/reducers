@@ -1,0 +1,49 @@
+const startingState = {
+  text: '',
+  author: '',
+  used: [],
+  freshPhrases: []
+}
+
+const testPhrases = [
+  {
+    text: 'Anything can be an adult diaper if you have confidence.',
+    author: 'Betty Dont'
+  },
+  {
+    text: 'Carbonated Contact Lenses!',
+    author: 'The Council for Carbon Squestration'
+  },
+  {
+    text: 'Homestar Runner dot com is the Illiad of the 21st century.',
+    author: 'Matthieu Pierce'
+  },
+  {
+    text: 'Sure, bring it inside the city gates-- never look a gift horse in the mouth!',
+    author: 'Paris of Troy'
+  }
+];
+
+
+function rootReducer(state = startingState, action) {
+  switch (action.type) {
+    case (next):
+      let lastPhrase = {
+        text: state.text,
+        author: state.author
+      };
+      let randomFreshIndex = Math.floor(Math.random() * state.freshPhrases.length);
+      return ({
+        text: ,
+        author: ,
+        used: ,
+        freshPhrases: 
+      });
+
+  }
+  
+
+}
+
+
+export default rootReducer;
