@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider, connect } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from './redux/reducers'
+import rootReducer from './redux/reducers.js'
 
 
 const store = createStore(rootReducer, applyMiddleware(thunk));

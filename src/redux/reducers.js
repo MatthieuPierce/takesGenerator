@@ -1,4 +1,4 @@
-import { NEXT } from './constants';
+import { NEXT } from './constants.js';
 
 const startingState = {
   text: '',
@@ -43,6 +43,8 @@ function rootReducer(state = startingState, action) {
         freshPhrases: [...state.freshPhrases.slice(0, randomFreshIndex), 
                       ...state.freshPhrases.slice(randomFreshIndex + 1)]
       });
+    default:
+      return state;
 
   }
   
