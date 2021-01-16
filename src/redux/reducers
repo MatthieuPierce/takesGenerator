@@ -1,8 +1,10 @@
+import { NEXT } from './constants';
+
 const startingState = {
   text: '',
   author: '',
-  used: [],
-  freshPhrases: []
+  usedPhrases: [],
+  freshPhrases: testPhrases
 }
 
 const testPhrases = [
@@ -27,17 +29,19 @@ const testPhrases = [
 
 function rootReducer(state = startingState, action) {
   switch (action.type) {
-    case (next):
+    case (NEXT):
       let lastPhrase = {
         text: state.text,
         author: state.author
       };
       let randomFreshIndex = Math.floor(Math.random() * state.freshPhrases.length);
+      let { text, author } = state.freshPhrases[randomFreshIndex];
       return ({
-        text: ,
-        author: ,
-        used: ,
-        freshPhrases: 
+        text: text,
+        author: author,
+        usedPrhases: state.usedPhrases.concat(lastPhrase),
+        freshPhrases: [...state.freshPhrases.slice(0, randomFreshIndex), 
+                      ...state.freshPhrases.slice(randomFreshIndex + 1)]
       });
 
   }
