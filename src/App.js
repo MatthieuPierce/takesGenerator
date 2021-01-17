@@ -1,6 +1,7 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Sharebox from './components/Sharebox'
 import { connect } from 'react-redux';
 import { nextQuote } from './redux/actions';
 
@@ -19,8 +20,8 @@ class App extends React.component {
   return (
     <div id="quote-box">
       <h1>Take Box</h1>
-      <div id="text"></div>
-      <div id="author"></div>
+      <div id="text" value={props.text}></div>
+      <div id="author" value={props.author}></div>
       <button id="next-button" onClick={this.handleNext}>Next Take</button>
       <Sharebox />
     </div>
