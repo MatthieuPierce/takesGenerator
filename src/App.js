@@ -1,13 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { connect } from 'react-redux';
+import { nextQuote } from './redux/actions';
+
+
+class App extends React.component {
+  constructor(props) {
+    super(props);
+    this.handleNext = this.handleNext.bind(this);
+  }
+
+  handleNext = () => {
+    this.props.nextQuote();
+  }
+
+  render () {
   return (
-
-
     <div id="quote-box">
+      <h1>Take Box</h1>
       <div id="text"></div>
       <div id="author"></div>
+      <button id="next-button" onClick={this.handleNext}>Next Take</button>
       <Sharebox />
     </div>
 
@@ -31,5 +45,31 @@ function App() {
     // </div>
   );
 }
+}
 
-export default App;
+//Redux connections
+const mapStateToProps = (state) => {
+  return {
+    text: state.text,
+    author: state.author
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return ({
+    nextQuote: function() {
+      dispatch(nextQuote());
+    }
+  });
+}
+
+//Sample Redux notes
+//Two-step connect
+// 1) `connect` returns a new function that accepts the component to wrap:
+// const connectToStore = connect(mapStateToProps, mapDispatchToProps);
+// 2) and that function returns the connected, wrapper component:
+// const ConnectedComponent = connectToStore(Component);
+// // One-step connect (curried)
+// connect(mapStateToProps, mapDispatchToProps)(Component);
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
