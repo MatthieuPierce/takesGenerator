@@ -6,7 +6,7 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
 //Redux imports
-import { Provider, connect } from 'react-redux';
+import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './redux/reducers.js'

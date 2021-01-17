@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-class Sharebox extends React.component {
+class Sharebox extends React.Component {
   constructor(props) {
     super(props);
   }

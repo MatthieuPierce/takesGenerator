@@ -38,7 +38,7 @@ function rootReducer(state = startingState, action) {
       return ({
         text: text,
         author: author,
-        usedPrhases: state.usedPhrases.concat(lastPhrase),
+        usedPhrases: [...state.usedPhrases, lastPhrase],
         freshPhrases: [...state.freshPhrases.slice(0, randomFreshIndex), 
                       ...state.freshPhrases.slice(randomFreshIndex + 1)]
       });

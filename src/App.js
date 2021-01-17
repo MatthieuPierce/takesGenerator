@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Sharebox from './components/Sharebox'
 import { connect } from 'react-redux';
 import { nextQuote } from './redux/actions';
 
 
-class App extends React.component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleNext = this.handleNext.bind(this);
@@ -16,17 +16,17 @@ class App extends React.component {
     this.props.nextQuote();
   }
 
-  render () {
-  return (
-    <div className="App">
-      <div id="quote-box">
-        <h1>Take Box</h1>
-        <div id="text" value={this.props.text}></div>
-        <div id="author" value={this.props.author}></div>
-        <button id="next-button" onClick={this.handleNext}>Next Take</button>
-        <Sharebox />
+  render() {
+    return (
+      <div className="App">
+        <div id="quote-box">
+          <h1>Take Box</h1>
+          <div id="text" value={this.props.text}></div>
+          <div id="author" value={this.props.author}></div>
+          <button id="next-button" onClick={this.handleNext}>Next Take</button>
+          <Sharebox />
+        </div>
       </div>
-    </div>
 
 
 
@@ -75,4 +75,4 @@ const mapDispatchToProps = (dispatch) => {
 // // One-step connect (curried)
 // connect(mapStateToProps, mapDispatchToProps)(Component);
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, { nextQuote })(App);
