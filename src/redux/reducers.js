@@ -1,12 +1,5 @@
 import { NEXT } from './constants.js';
 
-const startingState = {
-  text: '',
-  author: '',
-  usedPhrases: [],
-  freshPhrases: testPhrases
-}
-
 const testPhrases = [
   {
     text: 'Anything can be an adult diaper if you have confidence.',
@@ -26,6 +19,12 @@ const testPhrases = [
   }
 ];
 
+const startingState = {
+  text: '',
+  author: '',
+  usedPhrases: [],
+  freshPhrases: testPhrases
+}
 
 function rootReducer(state = startingState, action) {
   switch (action.type) {
