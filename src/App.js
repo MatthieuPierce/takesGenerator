@@ -18,12 +18,14 @@ class App extends React.component {
 
   render () {
   return (
-    <div id="quote-box">
-      <h1>Take Box</h1>
-      <div id="text" value={this.props.text}></div>
-      <div id="author" value={this.props.author}></div>
-      <button id="next-button" onClick={this.handleNext}>Next Take</button>
-      <Sharebox />
+    <div className="App">
+      <div id="quote-box">
+        <h1>Take Box</h1>
+        <div id="text" value={this.props.text}></div>
+        <div id="author" value={this.props.author}></div>
+        <button id="next-button" onClick={this.handleNext}>Next Take</button>
+        <Sharebox />
+      </div>
     </div>
 
 
