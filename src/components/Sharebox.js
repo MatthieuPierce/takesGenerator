@@ -7,9 +7,9 @@ class Sharebox extends React.Component {
   }
 
   render() {
-    let tweetContent = `twitter.com/intent/tweet?text=${this.props.textForShare} -${this.props.author}`;
+    let tweetContent = `https://twitter.com/intent/tweet?text=${this.props.textForShare} -${this.props.author}`;
     return (
-      <div><a href={tweetContent} id="tweet-quote">Tweet this take!</a></div>
+      <div><a href={tweetContent} target="_blank" id="tweet-quote">Tweet this take!</a></div>
     )
   }
 }

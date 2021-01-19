@@ -16,14 +16,18 @@ class App extends React.Component {
     this.props.nextQuote();
   }
 
+  componentDidMount() {
+    this.handleNext();
+  }
+
   render() {
     return (
       <div className="App">
         <div id="quote-box">
           <h1>Take Box</h1>
-          <div id="text" value={this.props.text}></div>
-          <div id="author" value={this.props.author}></div>
-          <button id="next-button" onClick={this.handleNext}>Next Take</button>
+          <div id="text">{this.props.text}</div>
+          <div id="author" >-{this.props.author}</div>
+          <button id="new-quote" onClick={this.handleNext}>Next Take</button>
           <Sharebox />
         </div>
       </div>
@@ -58,13 +62,14 @@ const mapStateToProps = (state) => {
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return ({
-    nextQuote: function() {
-      dispatch(nextQuote());
-    }
-  });
-}
+//mapDispatchToProps currently unused, using literal { nextQuote } instead
+// const mapDispatchToProps = (dispatch) => {
+//   return ({
+//     nextQuote: function() {
+//       dispatch(nextQuote());
+//     }
+//   });
+// }
 
 //Sample Redux notes
 //Two-step connect
