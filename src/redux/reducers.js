@@ -1,15 +1,20 @@
 import { NEXT } from './constants.js';
-import data from './takes20210118.json';
+// import jsonTakes from './takes20210118.json';
+// console.log(jsonTakes);
+// // let takes = JSON.parse(jsonTakes);
 
-let takes = data.json();
+// let takes = jsonTakes.takes;
+// console.log(takes);
 
-// fetch('./takes20210118.json')
-//   .then(response => response.text())
-//   .then(data => {
-//     console.log(data);
-//     takes = data
-//   })
-//   .catch(error => console.log(error));
+let takes = [];
+
+fetch('./takes20210118.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    takes = data
+  })
+  .catch(error => console.log(error));
 
 // const testPhrases = [
 //   {
