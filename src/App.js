@@ -4,6 +4,7 @@ import './App.css';
 import Sharebox from './components/Sharebox'
 import { connect } from 'react-redux';
 import { nextQuote } from './redux/actions';
+import "@fontsource/comic-mono";
 
 
 class App extends React.Component {

@@ -16,12 +16,16 @@ button {
 
 .App {
   align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 .quote-box {
   width: 95vw;
+  border: 2px solid var(--main-text-color);
+  padding: 0.5rem;
 }
 
 
@@ -31,7 +35,7 @@ button {
   justify-content: space-between;
   gap: 1rem;
   margin: 1rem 0;
-  min-height: 5rem;
+  min-height: 4rem;
 }
 
 #full-quote {
@@ -40,6 +44,11 @@ button {
   gap: 1rem;
   min-height: 8rem;
   justify-content: center;
+}
+
+#text {
+  font-size: 1.25rem;
+  font-style: oblique;
 }
 
 #new-quote {
