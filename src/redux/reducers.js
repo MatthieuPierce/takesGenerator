@@ -1,5 +1,5 @@
 import { NEXT } from './constants.js';
-import jsonTakes from './takes20210118.json';
+import jsonTakes from './takesBase.json';
 
 let takes = jsonTakes.takes;
 
