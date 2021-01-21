@@ -27,11 +27,13 @@ class App extends React.Component {
           <header>
             <h1>Hot Takes Wellspring</h1>
           </header>
-          <div id="text">{this.props.text}</div>
-          <div id="author" >-{this.props.author}</div>
+          <div id="full-quote">
+            <div id="text">{this.props.text}</div>
+            <div id="author" >-{this.props.author}</div>
+          </div>
           <div className="buttonbox">
-            <button id="new-quote" onClick={this.handleNext}>Next Take</button>
             <Sharebox />
+            <button id="new-quote" onClick={this.handleNext}>Next Take</button>
           </div>
         </div>
       </div>

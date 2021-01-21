@@ -1,3 +1,20 @@
 .sharebox {
   display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 0;
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  margin: 0;
+  /* padding: 0.5rem; */
+  text-align: center;
+  width: 10rem;
+}
+
+#tweet-quote {
+  display: block;
+  color: var(--main-bg-color);
+  text-decoration: none;
 }
