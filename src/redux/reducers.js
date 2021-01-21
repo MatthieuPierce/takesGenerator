@@ -6,15 +6,22 @@ import { NEXT } from './constants.js';
 // let takes = jsonTakes.takes;
 // console.log(takes);
 
-let takes = [];
+let takes;
 
-fetch('./takes20210118.json')
-  .then(response => response.json())
+function getTakes(){
+  fetch('./takes20210118.json')
+  .then(response => {
+    return response.json()
+  })
+  .then(data => console.log(data))
   .then(data => {
-    console.log(data);
-    takes = data
+    takes = data.takes;
   })
   .catch(error => console.log(error));
+}
+
+getTakes();
+console.log(takes);
 
 // const testPhrases = [
 //   {
@@ -41,6 +48,8 @@ const startingState = {
   usedPhrases: [],
   freshPhrases: takes
 }
+
+// console.log(startingState);
 
 function rootReducer(state = startingState, action) {
   switch (action.type) {
