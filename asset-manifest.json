@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/takesGenerator/static/css/main.3d61c6d7.chunk.css",
+    "main.js": "/takesGenerator/static/js/main.77b142d2.chunk.js",
+    "main.js.map": "/takesGenerator/static/js/main.77b142d2.chunk.js.map",
+    "runtime-main.js": "/takesGenerator/static/js/runtime-main.b655ea3e.js",
+    "runtime-main.js.map": "/takesGenerator/static/js/runtime-main.b655ea3e.js.map",
+    "static/css/2.286c6eac.chunk.css": "/takesGenerator/static/css/2.286c6eac.chunk.css",
+    "static/js/2.446444ed.chunk.js": "/takesGenerator/static/js/2.446444ed.chunk.js",
+    "static/js/2.446444ed.chunk.js.map": "/takesGenerator/static/js/2.446444ed.chunk.js.map",
+    "index.html": "/takesGenerator/index.html",
+    "static/css/2.286c6eac.chunk.css.map": "/takesGenerator/static/css/2.286c6eac.chunk.css.map",
+    "static/css/main.3d61c6d7.chunk.css.map": "/takesGenerator/static/css/main.3d61c6d7.chunk.css.map",
+    "static/js/2.446444ed.chunk.js.LICENSE.txt": "/takesGenerator/static/js/2.446444ed.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/takesGenerator/static/media/comic-mono-latin-400-normal.f051768c.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b655ea3e.js",
+    "static/css/2.286c6eac.chunk.css",
+    "static/js/2.446444ed.chunk.js",
+    "static/css/main.3d61c6d7.chunk.css",
+    "static/js/main.77b142d2.chunk.js"
+  ]
+}
