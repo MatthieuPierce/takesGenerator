@@ -23,12 +23,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div id="quote-box">
-          <h1>Take Box</h1>
+        <div id="quote-box" className="quote-box">
+          <header>
+            <h1>Hot Takes Wellspring</h1>
+          </header>
           <div id="text">{this.props.text}</div>
           <div id="author" >-{this.props.author}</div>
-          <button id="new-quote" onClick={this.handleNext}>Next Take</button>
-          <Sharebox />
+          <div className="buttonbox">
+            <button id="new-quote" onClick={this.handleNext}>Next Take</button>
+            <Sharebox />
+          </div>
         </div>
       </div>
 

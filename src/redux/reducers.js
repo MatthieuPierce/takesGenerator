@@ -1,46 +1,24 @@
 import { NEXT } from './constants.js';
-// import jsonTakes from './takes20210118.json';
-// console.log(jsonTakes);
-// // let takes = JSON.parse(jsonTakes);
+import jsonTakes from './takes20210118.json';
 
-// let takes = jsonTakes.takes;
+let takes = jsonTakes.takes;
+
+// function getTakes(){
+//   fetch('./takes20210118.json')
+//   .then(response => {
+//     return response.json()
+//   })
+//   // .then(data => {
+//   //   console.log(data);
+//   //   return data;})
+//   .then(data => {
+//     takes = data.takes;
+//   })
+//   .catch(error => console.log(error));
+// }
+// getTakes();
 // console.log(takes);
 
-let takes;
-
-function getTakes(){
-  fetch('./takes20210118.json')
-  .then(response => {
-    return response.json()
-  })
-  .then(data => console.log(data))
-  .then(data => {
-    takes = data.takes;
-  })
-  .catch(error => console.log(error));
-}
-
-getTakes();
-console.log(takes);
-
-// const testPhrases = [
-//   {
-//     text: 'Anything can be an adult diaper if you have confidence.',
-//     author: 'Betty Dont'e
-//   },
-//   {
-//     text: 'Carbonated Contact Lenses!',
-//     author: 'The Council for Carbon Squestration'
-//   },
-//   {
-//     text: 'Homestar Runner dot com is the Illiad of the 21st century.',
-//     author: 'Matthieu Pierce'
-//   },
-//   {
-//     text: 'Sure, bring it inside the city gates-- never look a gift horse in the mouth!',
-//     author: 'Paris of Troy'
-//   }
-// ];
 
 const startingState = {
   text: '',

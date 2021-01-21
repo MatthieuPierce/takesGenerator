@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './Sharebox.css';
 
 class Sharebox extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class Sharebox extends React.Component {
   render() {
     let tweetContent = `https://twitter.com/intent/tweet?text=${this.props.textForShare} -${this.props.author}`;
     return (
-      <div><a href={tweetContent} target="_blank" id="tweet-quote" rel="noreferrer">Tweet this take!</a></div>
+      <div className="sharebox"><a href={tweetContent} target="_blank" id="tweet-quote" rel="noreferrer">Tweet this take!</a></div>
     )
   }
 }
